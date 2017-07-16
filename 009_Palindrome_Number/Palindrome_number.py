@@ -7,7 +7,7 @@ class Solution(object):
         if x < 0:
             return False
         count = 1
-        while x / count > 10:
+        while x / count >= 10:
             count *= 10
         while x:
             left = x / count
