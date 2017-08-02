@@ -11,6 +11,7 @@
 思路二：  
 通过移位操作，每次向右移动一位，一位一位的判定是否是数字1。
 ![](https://github.com/fangweiren/leetcode/blob/master/screenshots/2234.jpg?raw=true)
+<pre><code>
 class Solution(object):
     def hammingWeight(self, n):
         """
@@ -21,14 +22,17 @@ class Solution(object):
         while n:
             count += n & 1
             n >>= 1
-        return count
+        return count
+</code></pre>
 
-思路三：  
+思路三：  
 将输入的数表示成二进制的字符串，数一下有多少个1即可。
+<pre><code>
 class Solution(object):
     def hammingWeight(self, n):
         """
         :type n: int
         :rtype: int
         """
-        return bin(n).count('1')
+        return bin(n).count('1')
+</code></pre>
