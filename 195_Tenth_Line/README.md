@@ -5,5 +5,5 @@
 awk 'NR==10' file.txt
 ```
 
-[195 Tenth Line](https://leetcode.com/problems/tenth-line/description/)
+[195 Tenth Line](https://leetcode.com/problems/tenth-line/description/)  
 [More Solutions](https://www.cnblogs.com/grandyang/p/5376902.html)
