@@ -1,24 +1,21 @@
 题意：  
-删除链表中值为给定的val的节点。比如：给定链表 1 –> 2 –> 6 –> 3 –> 4 –> 5 和值 val = 6 ，返回 1 –> 2 –> 3 –> 4 –> 5 。
+Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.  
+给定一个数组，和一个整数 k，判断该数组中是否存在不同的索引 i 和 j，使得 nums[i] = nums[j]，且 i 和 j 的差不超过 k。
 
 ```
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
-    def removeElements(self, head, val):
-        dummy=ListNode(0)
-        dummy.next=head
-        p=dummy
-        while p.next:
-            if p.next.val==val:
-                p.next=p.next.next
-            else:
-                p=p.next
-        return dummy.next
+    def containsNearbyDuplicate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        d1 = {}
+        for i, v in enumerate(nums):
+            if v in d1 and i - d1[v] <= k:
+                return True
+            d1[v] = i
+        return False
 ```
 
-[203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/description/)
+[219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/)
