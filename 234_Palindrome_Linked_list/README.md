@@ -30,3 +30,5 @@ class Solution(object):
             head = head.next
         return vals == vals[::-1]
 ```
+
+[234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/)
