@@ -18,7 +18,7 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 
 思路  
 用等差数列求和公式求出和，那么减去给定数组的和，得到的结果就是缺失的数字。
-![等差数列求和公式](https://github.com/fangweiren/LeetCode-Python/blob/master/screenshots/dengchashulieqiuhe.png)
+![等差数列求和公式](https://github.com/fangweiren/LeetCode-Python/blob/master/screenshots/dengchashulieqiuhe.png)  
 等差数列和 = (首项0 + 末项n) * 项数(n+1) / 2 
 
 ```
