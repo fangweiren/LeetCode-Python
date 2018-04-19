@@ -16,7 +16,7 @@ Note: You may assume the string contain only lowercase letters.
 思路  
 遍历两次，第一次用字典或列表记录每个字符的出现的次数，第二次判断字符是否==1返回其索引值。
 
-```
+```python
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
         """
@@ -54,4 +54,4 @@ class Solution(object):
         return -1
 ```
 
-LeetCode 387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
+[LeetCode 387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
