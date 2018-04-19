@@ -9,13 +9,12 @@ Note:
 You may assume that both strings contain only lowercase letters.  
 你可以假设两个字符串均只含有小写字母。
 
-canConstruct("a", "b") -> false
-canConstruct("aa", "ab") -> false
-canConstruct("aa", "aab") -> true
+canConstruct("a", "b") -> false  
+canConstruct("aa", "ab") -> false  
+canConstruct("aa", "aab") -> true  
 
 思路  
 计算两个字符串每个字母出现的次数再比较即可。可以用数组或字典保存每个字母出现的次数，对于两个字符串分别用加法和减法统计字母出现次数。
-
 ```
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
