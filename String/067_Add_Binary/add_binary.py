@@ -10,8 +10,8 @@ class Solution(object):
         if b == '':
             return a
         if a[-1] == '1' and b[-1] == '1':
-            self.addBinary(self.addBinary(a[-1], b[-1]), '1') + '0'
+            return self.addBinary(self.addBinary(a[:-1], b[:-1]), '1') + '0'
         elif a[-1] == '0' and b[-1] == '0':
-            self.addBinary(a[-1], b[-1]) + '0'
+            return self.addBinary(a[:-1], b[:-1]) + '0'
         else:
-            self.addBinary(a[-1], b[-1]) + '1'
+            return self.addBinary(a[:-1], b[:-1]) + '1'
