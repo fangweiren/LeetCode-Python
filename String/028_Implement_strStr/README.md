@@ -16,7 +16,7 @@ Input: haystack = "aaaaa", needle = "bba"
 Output: -1
 ```
 Clarification:  
-澄清:
+澄清:  
 What should we return when needle is an empty string? This is a great question to ask during an interview.  
 当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。
 
@@ -41,3 +41,4 @@ class Solution(object):
                 return i
         return -1
 ```
+[LeetCode 28. Implement strStr()](https://leetcode.com/problems/implement-strstr/description/)
