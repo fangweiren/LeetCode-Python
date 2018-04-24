@@ -39,3 +39,4 @@ class Solution(object):
             res += strs[0][i]
         return res
 ```
+[LeetCode 14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)
