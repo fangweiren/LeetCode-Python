@@ -12,7 +12,7 @@ class Solution(object):
             else:
                 digits[i] = digits[i] + num
                 num = 0
-				break
+                break
         if num == 1:
             digits.insert(0,1)
         return digits
