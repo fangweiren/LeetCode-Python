@@ -1,29 +1,31 @@
-原题
+### 题意
+Given a non-negative index k where k ≤ 33, return the `k**th` index row of the Pascal's triangle.  
+给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
 
-用O(k)的空间得到杨辉三角第k行的数值。
+Note that the row index starts from 0.  
+请注意，行索引从0开始。
 
-注意点：
-从0开始计算行数，即第0行为[1]
-例子:
+Example:
+```python
+Input: 3
+Output: [1,3,3,1]
+```
+Follow up:  
+Could you optimize your algorithm to use only O(k) extra space?  
+你可以优化你的算法到 O(k) 空间复杂度吗？
 
-输入: k = 3
-输出: [1,3,3,1]
-
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-			   ]
-解题思路
-现在要考虑的是在 Pascal's Triangle 的基础上节约空间，我们可以知道第k行需要(k+1)的空间，且下一行占用的长度都比上一行长。
-
-1、参照Pascal's Triangle，算出所有的list，直接get(rowIndex)
-2、如果是空间限制，只能声明k长度的list，依次计算。具体实现是这样的：
-1)、初始化一个list
-2)、每个列表的第一个值是1
-3)、针对每个列表，长度应该是当前rowIndex+1
-4)、那么列表元素值为当前值+前一个值，其实就是递推。
-5)、循环刚开始，前一个值为1，以后前一个值需要记录。
-6)、最后别忘了最后一个值是1
+### 思路
+因为有空间限制，在 Pascal's Triangle 的基础上节约空间。
+```python
+class Solution(object):
+    def getRow(self, rowIndex):
+        """
+        :type rowIndex: int
+        :rtype: List[int]
+        """
+        row = [1]
+        for _ in range(rowIndex):
+            row = [x + y for x, y in zip([0]+row, row+[0])]
+        return row
+```
+[LeetCode 119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/description/)
