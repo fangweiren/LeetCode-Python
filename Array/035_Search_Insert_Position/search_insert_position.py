@@ -5,11 +5,8 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        if not nums:
-            return 0
-        left = 0
-        right = len(nums)-1
-        while left < right:
+        left, right = 0, len(nums)-1
+        while left <= right:
             mid = (left + right) / 2
             if nums[mid] > target:
                 right = mid - 1
@@ -17,7 +14,5 @@ class Solution(object):
                 left = mid + 1
             else:
                 return mid
-																									        if nums[left] >= target:
-            return left
-      if nums[right] < target:
-            return right + 1
+        
+        return left
