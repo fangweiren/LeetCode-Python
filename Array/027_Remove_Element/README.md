@@ -28,7 +28,7 @@ Note that the order of those five elements can be arbitrary.
 
 It doesn't matter what values are set beyond the returned length.  
 你不需要考虑数组中超出新长度后面的元素。
-
+```
 ### 思路一
 类似于 26 题的思路，要点是要把不等于目标值的元素放到数组前面。
 ```python
