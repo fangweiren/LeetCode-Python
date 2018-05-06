@@ -11,7 +11,7 @@ Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 ```
 ### 思路
 从下面的厄拉多塞筛法可以看出，我们只需遍历 [2, `n**0.5`]，因为超过 `n**0.5`(根号 n) 部分如果不是素数，则作为因子在前面的数已经被删除了。同时这里利用了 Python 里 list 的特性 [::i] 取 i 的倍数。
-![厄拉多塞筛法](http://img1.ph.126.net/ReCXM6aHuw2AqdoW0kS82A==/6632742321909826660.png)
+![厄拉多塞筛法](https://github.com/fangweiren/LeetCode-Python/blob/master/screenshots/primes.png)
 ```python
 class Solution(object):
     def countPrimes(self, n):
